@@ -76,11 +76,15 @@ const resp=await db.insert(UserAnswer)
   createdAt:moment().format('DD-MM-yyyy')
 
 })
-  if(resp){
-    toast('Answer saved successfully');
-    setUserAnswer('');
-    setResults([]);
-  }
+if (resp) {
+  toast('Answer saved successfully', {
+    position: "top-right",
+    style: { marginTop: '55px' } // Adjut the margin value as needed
+  });
+  setUserAnswer('');
+  setResults([]);
+}
+
   setResults([]);
   setLoading(false);
   }
