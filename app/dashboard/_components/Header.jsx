@@ -1,6 +1,8 @@
 "use client"
+import Home from '@/app/page'
 import { UserButton } from '@clerk/nextjs'
 import Image from 'next/image'
+import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import React, { useEffect } from 'react'
 
@@ -12,7 +14,8 @@ console.log(path)
   return (
     <div className='flex p-4 items-center justify-between bg-secondary shadow-sm'>
 
-        <Image src={'/logo.png'} width={200} height={150} alt='logo'/>
+        <Link href={'/dashboard'}>
+        <Image src={'/logo.png'} width={200} height={150} alt='logo'/></Link>
         <ul className='hidden md:flex gap-6'>
             <li className={`hover:text-primary hover:font-bold transition-all cursor-pointer ${path=='/dashboard'&&'text-primary font-bold'}`}>Dashboard</li>
             <li className={`hover:text-primary hover:font-bold transition-all cursor-pointer ${path=='/dashboard/faq'&&'text-primary font-bold'}`}>FAQ's</li>
