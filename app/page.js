@@ -6,7 +6,7 @@ export default function Home() {
     <div className="h-screen overflow-hidden">
       <Header />
 
-      {/* Hero Section */}
+     
       <div className="bg-gray-50 text-gray-900 h-full flex flex-col items-center justify-center">
         <div className="container mx-auto text-center">
           <h1 className="text-6xl font-extrabold mb-6">Master Your Interview Skills</h1>
