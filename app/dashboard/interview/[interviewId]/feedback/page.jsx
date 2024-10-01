@@ -49,7 +49,7 @@ function Feedback({ params }) {
             {feedbackList.map((item, index) => (
               <Collapsible
                 key={index}
-                className="bg-white shadow-md rounded-lg border border-gray-200 transition-all transform hover:scale-105"
+                className="bg-white shadow-md rounded-lg border border-gray-200 transition-all transform hover:scale-100"
               >
                 <CollapsibleTrigger className="p-5 bg-white rounded-t-lg flex justify-between items-center cursor-pointer">
                   <span className="font-semibold text-lg text-left text-gray-700 w-full">
