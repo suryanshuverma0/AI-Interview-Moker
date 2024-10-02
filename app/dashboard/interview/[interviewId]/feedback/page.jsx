@@ -85,7 +85,7 @@ function Feedback({ params }) {
 
       <div className="mt-20 text-center">
         <Button
-          className="px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg shadow-lg transition-transform transform hover:scale-105"
+          className="px-8 py-3 bg-primary  text-white rounded-lg shadow-lg transition-transform transform hover:scale-100"
           onClick={() => router.replace('/dashboard')}
         >
           Go Home
