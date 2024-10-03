@@ -92,7 +92,7 @@ function Interview({ params }) {
 
       {/* Start button */}
       <div className="mt-10 flex justify-end">
-        <Link href={`/dashboard/interview/${params.interviewId}/start`}>
+        <Link href={`/Mock/interview/${params.interviewId}/start`}>
           <Button className="px-8 py-4 text-lg">Start Interview</Button>
         </Link>
       </div>

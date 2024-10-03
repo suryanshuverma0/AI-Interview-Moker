@@ -1,6 +1,6 @@
 import React from 'react'
 import Header from './_components/Header'
-function DashboardLayout({children}) {
+function MockLayout({children}) {
   return (
     
     <div>
@@ -15,4 +15,4 @@ function DashboardLayout({children}) {
   
 }
 
-export default DashboardLayout
+export default MockLayout

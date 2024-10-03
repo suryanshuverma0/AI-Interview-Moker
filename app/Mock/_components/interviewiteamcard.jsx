@@ -6,12 +6,12 @@ function InterviewitemCard({interview}) {
     const router=useRouter();
 
     const onStart=()=>{
-        router.push(`/dashboard/interview/`+interview?.mockId)
+        router.push(`/Mock/interview/`+interview?.mockId)
     }
 
 
     const onFeedbackPress=()=>{
-        router.push(`/dashboard/interview/`+interview?.mockId+"/feedback")
+        router.push(`/Mock/interview/`+interview?.mockId+"/feedback")
     }
 
   return (

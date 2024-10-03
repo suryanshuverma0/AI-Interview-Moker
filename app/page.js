@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Header from "./dashboard/_components/Header";
+import Header from "./Mock/_components/Header";
 
 export default function Home() {
   return (
@@ -13,7 +13,7 @@ export default function Home() {
           <p className="text-lg text-gray-800 max-w-2xl mx-auto mb-8">
           Designed and Developed by <Link href="https://sohanmehta.com.np">Sohan Mehta</Link>
           </p>
-          <Link href="/dashboard">
+          <Link href="/Mock">
           <button className="px-6 py-3 border border-grey-900 rounded-lg text-gray-900 font-semibold">
               Start Practicing
             </button>

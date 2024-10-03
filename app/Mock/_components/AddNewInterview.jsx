@@ -62,7 +62,7 @@ function AddNewInterview() {
 
        if(resp){
         setOpenDailog(false)
-        router.push('/dashboard/interview/'+resp[0]?.mockId)
+        router.push('/Mock/interview/'+resp[0]?.mockId)
        }
       }else{
         console.log("ERROR");

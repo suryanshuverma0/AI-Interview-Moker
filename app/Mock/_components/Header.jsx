@@ -23,23 +23,23 @@ function Header() {
           </h1>
         </Link>
         <ul className='hidden md:flex gap-4'>
-          <Link href={'/dashboard'}>
-            <li className={`transition-colors duration-300 ease-in-out transform hover:text-gray-800 cursor-pointer ${path == '/dashboard' && 'text-primary font-bold'}`}>
-              DASHBOARD
+          <Link href={'/Mock'}>
+            <li className={`transition-colors duration-300 ease-in-out transform hover:text-gray-800 cursor-pointer ${path == '/Mock' && 'text-primary font-bold'}`}>
+              Mock
             </li>
           </Link>
           <Link href={'/'}>
-            <li className={`transition-colors duration-300 ease-in-out transform hover:text-gray-800 cursor-pointer ${path == '/dashboard/faq' && 'text-primary font-bold'}`}>
+            <li className={`transition-colors duration-300 ease-in-out transform hover:text-gray-800 cursor-pointer ${path == '/Mock/faq' && 'text-primary font-bold'}`}>
               FAQ'S
             </li>
           </Link>
           <Link href={'/'}>
-            <li className={`transition-colors duration-300 ease-in-out transform hover:text-gray-800 cursor-pointer ${path == '/dashboard/upgrade' && 'text-primary font-bold'}`}>
+            <li className={`transition-colors duration-300 ease-in-out transform hover:text-gray-800 cursor-pointer ${path == '/Mock/upgrade' && 'text-primary font-bold'}`}>
               UPGRADE
             </li>
           </Link>
           <Link href={'/'}>
-            <li className={`transition-colors duration-300 ease-in-out transform hover:text-gray-800 cursor-pointer ${path == '/dashboard/how' && 'text-primary font-bold'}`}>
+            <li className={`transition-colors duration-300 ease-in-out transform hover:text-gray-800 cursor-pointer ${path == '/Mock/how' && 'text-primary font-bold'}`}>
               HOW IT WORKS?
             </li>
           </Link>
