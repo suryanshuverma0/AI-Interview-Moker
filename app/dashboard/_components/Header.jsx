@@ -19,7 +19,7 @@ function Header() {
         {/* Text in place of Logo */}
         <Link href={'/'}>
           <h1 className='text-3xl font-extrabold text-gray-900 uppercase cursor-pointer'>
-            AI INTERVIEW
+            EXPONENT.AI
           </h1>
         </Link>
         <ul className='hidden md:flex gap-4'>
