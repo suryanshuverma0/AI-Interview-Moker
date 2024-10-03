@@ -25,7 +25,7 @@ function Header() {
         <ul className='hidden md:flex gap-4'>
           <Link href={'/Mock'}>
             <li className={`transition-colors duration-300 ease-in-out transform hover:text-gray-800 cursor-pointer ${path == '/Mock' && 'text-primary font-bold'}`}>
-              Mock
+              MOCK INTERVIEW
             </li>
           </Link>
           <Link href={'/'}>
