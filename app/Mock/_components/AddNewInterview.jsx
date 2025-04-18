@@ -25,19 +25,20 @@ function AddNewInterview() {
 
     const [openDailog,setOpenDailog]=useState(false)
     const [jobPosition, setJobPosition]=useState();
-    const [jobDesc, setJobDesc]=useState();
+    const [jobDescription, setJobDesc]=useState();
     const [jobExperience, setJobExperience]=useState();
     const [loading,setLoading]=useState(false);
     const [jsonResponse,setJsonResponse]=useState([]);
+
     const router=useRouter();
     const {user} = useUser();
 
     const onSubmit=async(e)=>{
       setLoading(true)
         e.preventDefault()
-        console.log(jobPosition,jobDesc,jobExperience);
+        console.log(jobPosition,jobDescription,jobExperience);
  
-       const InputPrompt="Job Position: "+jobPosition+", Job Description: "+jobDesc+", Years Of Experience: "+jobExperience+",Based on job position, job description and years of experience give me "+process.env.NEXT_PUBLIC_INTERVIEW_QUESTION_COUNT+" interview question along with answers in JSON format, Give us question and answer field on JSON"
+       const InputPrompt="Job Position: "+jobPosition+", Job Description: "+jobDescription+", Years Of Experience: "+jobExperience+",Based on job position, job description and years of experience give me "+process.env.NEXT_PUBLIC_INTERVIEW_QUESTION_COUNT+" interview question along with answers in JSON format, Give us question and answer field on JSON"
 
        const result = await chatSession.sendMessage(InputPrompt)
        const MockJsonResp=(result.response.text()).replace('```json','').replace('```','');
@@ -45,14 +46,12 @@ function AddNewInterview() {
        setJsonResponse(MockJsonResp);
 
        if(MockJsonResp){
-
-       
        const resp= await db.insert(MockInterview)
        .values({
         mockId:uuidv4(),
         jsonMockResp:MockJsonResp,
         jobPosition: jobPosition,
-        jobDesc:jobDesc,
+        jobDescription:jobDescription,
         jobExperience:jobExperience,
         createdBy:user?.primaryEmailAddress?.emailAddress,
         createdAt: moment().format('DD-MM-yyyy')
@@ -92,19 +91,19 @@ function AddNewInterview() {
             <div className='mt-7 my-3'>
                 <label>Job Role/Job Position</label>
                 <Input placeholder="Eg. Flutter Developer" required
-                onChange={(event)=>setJobPosition(event.target.value)}
+                onChange={(event)=>setJobPosition(event.target.value)} value= {jobPosition}
                 />
             </div>
             <div className='my-3'>
                 <label>Job Description/Tech Stack (In Short)</label>
                 <Textarea placeholder="Eg. Dart, Expo, Firebase etc" required
-                onChange={(event)=>setJobDesc(event.target.value)}
+                onChange={(event)=>setJobDesc(event.target.value)} value={jobDescription}
                 />
             </div>
             <div className='my-3'>
                 <label>Years Of Experience</label>
                 <Input placeholder="Eg. 2" type="number" min="0" max="40" required
-                onChange={(event)=>setJobExperience(event.target.value)}
+                onChange={(event)=>setJobExperience(event.target.value)} value={jobExperience}
                 />
             </div>
         </div>
