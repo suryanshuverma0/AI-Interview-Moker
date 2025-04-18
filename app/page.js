@@ -11,7 +11,7 @@ export default function Home() {
         <div className="container mx-auto text-center">
           <h1 className="text-6xl font-extrabold mb-6">Master Your Interview Skills</h1>
           <p className="text-lg text-gray-800 max-w-2xl mx-auto mb-8">
-          Designed and Developed by <Link href="https://sohanmehta.com.np">Sohan Mehta</Link>
+          Designed and Developed by <Link href="https://suryanshuverma.vercel.app/">suryanshu Verma</Link>
           </p>
           <Link href="/Mock">
           <button className="px-6 py-3 border border-grey-900 rounded-lg text-gray-900 font-semibold">
